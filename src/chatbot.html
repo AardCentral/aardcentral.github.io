@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>ChatGPT</title>
+</head>
+
+<body>
+   <div id="chat-container">
+      <textarea id="input-text" placeholder="Enter your message here"></textarea>
+      <button id="send-button" onclick="sendMessage()">Send</button>
+      <div id="chat-log"></div>
+   </div>
+
+   <script>
+      function sendMessage() {
+         // Get the input text
+         var inputText = document.getElementById("input-text").value;
+
+         // Use the OpenAI API to send the input text and receive a response
+         fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+               'Authorization': 'Bearer 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'
+            },
+            body: JSON.stringify({
+               'prompt': inputText,
+               'temperature': 0.5
+            })
+         })
+            .then(response => response.json())
+            .then(responseJson => {
+               // Get the response text
+               var responseText = responseJson.choices[0].text;
+
+               // Add the response text to the chat log
+               var chatLog = document.getElementById("chat-log");
+               chatLog.innerHTML += "<p>You: " + inputText + "</p>";
+               chatLog.innerHTML += "<p>ChatGPT: " + responseText + "</p>";
+
+               // Clear the input text
+               document.getElementById("input-text").value = "";
+            });
+      }
+   </script>
+</body>
+
+</html>
