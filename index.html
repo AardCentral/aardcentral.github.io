@@ -2,14 +2,30 @@
 <html>
 <head>
 	<title>GitHub Links</title>
+	<style>
+		/* set the width of the frames */
+		iframe {
+			height: 100%;
+		}
+
+		iframe.left {
+			width: 25%;
+			float: left;
+		}
+
+		iframe.right {
+			width: 75%;
+			float: right;
+		}
+	</style>
 </head>
 <body>
 
 	<!-- left frame -->
-	<iframe src="src/left_frame.html" name="leftFrame" width="25%" height="100%" frameborder="0"></iframe>
+	<iframe src="left.html" name="leftFrame" class="left"></iframe>
 
 	<!-- right frame -->
-	<iframe src="src/right_frame.html" name="rightFrame" width="75%" height="100%" frameborder="0"></iframe>
+	<iframe src="about:blank" name="rightFrame" class="right"></iframe>
 
 </body>
 </html>
