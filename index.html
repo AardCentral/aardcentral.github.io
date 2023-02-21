@@ -34,12 +34,20 @@
          list-style: none;
          margin: 0;
          padding: 0;
-         column-count: 3;
+         display: flex;
+         flex-wrap: wrap;
       }
 
       .menu>li {
          display: inline-block;
          position: relative;
+         flex-basis: calc(33.33% - 10px);
+         margin-right: 10px;
+         margin-bottom: 10px;
+      }
+
+      .menu>li:last-child {
+         margin-right: 0;
       }
 
       .menu>li>a {
