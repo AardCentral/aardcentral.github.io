@@ -3,32 +3,43 @@
 
 <head>
    <title>AardCentral</title>
-   </head>
-<style>
-   .container {
-    max-width: 60%;
-    margin: 0 auto;
-}
+   <style>
+      .content {
+         max-width: 50%;
+         margin: 0 auto;
+         text-align: center;
+         background-color: black;
+         padding: 20px;
+         border: 1px solid white;
+         border-radius: 5px;
+      }
+
+      body {
+         background-color: black;
+         color: white;
+         margin: 0;
+         padding: 20px;
+         text-align: center;
+      }
+
+      a {
+         color: white;
+      }
+
+      a:visited {
+         color: gray;
+      }
 
 .menu {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    column-count: 3;
 }
 
 .menu > li {
     display: inline-block;
     position: relative;
-    flex-basis: calc(33.33% - 10px);
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.menu > li:last-child {
-    margin-right: 0;
 }
 
 .menu > li > a {
@@ -40,22 +51,20 @@
 
 .menu > li:hover .sub-menu {
     display: block;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    z-index: 1;
 }
 
 .sub-menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
     padding: 0;
     margin: 0;
     background-color: black;
     border: 1px solid white;
     border-radius: 5px;
-    -webkit-column-count: 5;
-    -moz-column-count: 5;
-    column-count: 5;
+    column-count: 3;
 }
 
 .sub-menu > li {
@@ -68,9 +77,11 @@
     color: black;
 }
    </style>
+</head>
+
 <body>
    <h1>AardCentral</h1>
-   <div class=" content">
+   <div class="content">
       <p>This site was created to serve as a centralized hub for all scripts related to Aardwolf. There are several
          players who contribute to a quality-of-life playing experience, but one generally has to know who the players
          are and what they have to offer. By keeping a central hub, players can bookmark this site and see what others
@@ -87,55 +98,34 @@
    <p>
       <center>Contributors</center>
    <p>
-   <div class="container">
-      <ul class="menu">
-         <li>
-            <a href="https://github.com/algaru-aard/Aard" target="_blank">Algaru</a>
-            <ul class="sub-menu">
-               <li>Poker Analyzer</li>
-               <li>Epic Helper</li>
-               <li>Heal Spam</li>
-               <li>Study Helper</li>
-               <li>Bonus Loot Comparison</li>
-               <li>Convenience Scripts</li>
-            </ul>
-         </li>
-         <li><a href="https://github.com/AreiaAard" target="_blank">Areia</a>
-            <ul class="sub-menu">
-               <li>Auto Envenom</li>
-               <li>Repop Timer</li>
-               <li>Align Lock</li>
-               <li>Winds Trader</li>
-               <li>Channel Manager</li>
-               <li>Portal Manager</li>
-               <li>Group Admin</li>
-               <li>Consider</li>
-               <li>VI Icefall</li>
-               <li>Message Gagger</li>
-               <li>Invis Ring</li>
-               <li>Rearm</li>
-               <li>Repeat Commands</li>
-               <li>Mobber</li>
-               <li>Modules</li>
-            </ul>
-         </li>
-         <li><a href="https://github.com/endavis/bastmush" target="_blank">Bast</a></li>
-         <li><a href="https://github.com/AardCrowley/Aardwolf-Scripts" target="_blank">Crowley</a></li>
-         <li><a href="https://github.com/Aardurel/aard-plugins" target="_blank">Durel</a></li>
-         <li><a href="https://github.com/aardlyworthit/aard-barter-report" target="_blank">Endymion</a></li>
-         <li><a href="https://github.com/galaban/gmcp" target="_blank">Galaban</a></li>
-         <li><a href="https://github.com/zzyzzyzzx/Hadar" target="_blank">Hadar</a></li>
-         <li><a href="https://github.com/Kelaire/aardstuff" target="_blank">Kelaire</a></li>
-         <li><a href="https://github.com/xeryax/KTracker" target="_blank">KoopaTroopa</a></li>
-         <li><a href="https://github.com/mendaloth/a-few-random-aard-plugins" target="_blank">Mendaloth</a></li>
-         <li><a href="https://github.com/nohbdy" target="_blank">Nohh</a></li>
-         <li><a href="https://github.com/AardPringle/Nulan-Boar-Summoner" target="_blank">Pringle</a></li>
-         <li><a href="https://github.com/hudmond/hudmond.github.io" target="_blank">Pwar</a></li>
-         <li><a href="https://github.com/Shindo-Aardwolf" target="_blank">Shindo</a></li>
-         <li><a href="https://github.com/tallimos/AardPlugins" target="_blank">Tallimos</a></li>
-
-      </ul>
-   </div>
+   <ul class="menu">
+      <li>
+         <a href="https://github.com/algaru-aard/Aard" target="_blank">Algaru</a>
+         <ul class="sub-menu">
+            <li>Poker Analyzer</li>
+            <li>Epic Helper</li>
+            <li>Heal Spam</li>
+            <li>Study Helper</li>
+            <li>Bonus Loot Comparison</li>
+            <li>Convenience Scripts</li>
+         </ul>
+      </li>
+      <li><a href="https://github.com/AreiaAard" target="_blank">Areia</a></li>
+      <li><a href="https://github.com/endavis/bastmush" target="_blank">Bast</a></li>
+      <li><a href="https://github.com/AardCrowley/Aardwolf-Scripts" target="_blank">Crowley</a></li>
+      <li><a href="https://github.com/Aardurel/aard-plugins" target="_blank">Durel</a></li>
+      <li><a href="https://github.com/aardlyworthit/aard-barter-report" target="_blank">Endymion</a></li>
+      <li><a href="https://github.com/galaban/gmcp" target="_blank">Galaban</a></li>
+      <li><a href="https://github.com/zzyzzyzzx/Hadar" target="_blank">Hadar</a></li>
+      <li><a href="https://github.com/Kelaire/aardstuff" target="_blank">Kelaire</a></li>
+      <li><a href="https://github.com/xeryax/KTracker" target="_blank">KoopaTroopa</a></li>
+      <li><a href="https://github.com/mendaloth/a-few-random-aard-plugins" target="_blank">Mendaloth</a></li>
+      <li><a href="https://github.com/nohbdy" target="_blank">Nohh</a></li>
+      <li><a href="https://github.com/AardPringle/Nulan-Boar-Summoner" target="_blank">Pringle</a></li>
+      <li><a href="https://github.com/hudmond/hudmond.github.io" target="_blank">Pwar</a></li>
+      <li><a href="https://github.com/Shindo-Aardwolf" target="_blank">Shindo</a></li>
+      <li><a href="https://github.com/tallimos/AardPlugins" target="_blank">Tallimos</a></li>
+   </ul>
 </body>
 
 </html>
