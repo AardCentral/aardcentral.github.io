@@ -3,9 +3,71 @@
 
 <head>
    <title>AardCentral</title>
-   <link rel="stylesheet" type="text/css" href="src/styles.css">
-</head>
+   </head>
+<style>
+   .container {
+    max-width: 60%;
+    margin: 0 auto;
+}
 
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu > li {
+    display: inline-block;
+    position: relative;
+    flex-basis: calc(33.33% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.menu > li:last-child {
+    margin-right: 0;
+}
+
+.menu > li > a {
+    display: block;
+    color: white;
+    padding: 10px;
+    background-color: black;
+}
+
+.menu > li:hover .sub-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 1;
+}
+
+.sub-menu {
+    display: none;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    column-count: 5;
+}
+
+.sub-menu > li {
+    display: block;
+    padding: 8px;
+}
+
+.sub-menu > li:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+   </style>
 <body>
    <h1>AardCentral</h1>
    <div class=" content">
