@@ -30,18 +30,40 @@
          color: gray;
       }
 
-      ul {
-         column-count: 3;
-         column-gap: 20px;
+      .menu {
          list-style: none;
+         margin: 0;
          padding: 0;
-         margin: 0 auto;
-         max-width: 800px;
-         text-align: left;
       }
 
-      li {
-         margin-bottom: 10px;
+      .menu>li {
+         display: inline-block;
+         position: relative;
+      }
+
+      .menu>li:hover .sub-menu {
+         display: block;
+      }
+
+      .sub-menu {
+         display: none;
+         position: absolute;
+         top: 100%;
+         left: 0;
+         z-index: 1;
+         padding: 0;
+         margin: 0;
+         background-color: #fff;
+         border: 1px solid #ccc;
+      }
+
+      .sub-menu>li {
+         display: block;
+         padding: 8px;
+      }
+
+      .sub-menu>li:hover {
+         background-color: #f0f0f0;
       }
    </style>
 </head>
@@ -63,12 +85,23 @@
       </p>
    </div>
    <p>
-      <center><h2>Contributors</h2></center><p>
-   <ul>
-      <li><a href="https://github.com/algaru-aard/Aard" target="_blank">Algaru</a></li>
+      <center>Contributors</center>
+   <p>
+   <ul class="menu">
+      <li>
+         <a href="https://github.com/algaru-aard/Aard" target="_blank">Algaru</a>
+         <ul class="sub-menu">
+            <li>Poker Analyzer</li>
+            <li>Epic Helper</li>
+            <li>Heal Spam</li>
+            <li>Study Helper</li>
+            <li>Bonus Loot Comparison</li>
+            <li>Convenience Scripts</li>
+            </ul>
+      </li>
       <li><a href="https://github.com/AreiaAard" target="_blank">Areia</a></li>
       <li><a href="https://github.com/endavis/bastmush" target="_blank">Bast</a></li>
-      <li><a href="https://github.com/AardCrowley/" target="_blank">Crowley</a></li>
+      <li><a href="https://github.com/AardCrowley/Aardwolf-Scripts" target="_blank">Crowley</a></li>
       <li><a href="https://github.com/Aardurel/aard-plugins" target="_blank">Durel</a></li>
       <li><a href="https://github.com/aardlyworthit/aard-barter-report" target="_blank">Endymion</a></li>
       <li><a href="https://github.com/galaban/gmcp" target="_blank">Galaban</a></li>
