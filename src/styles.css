@@ -9,7 +9,7 @@
       }
 
       body {
-         background-color: darkgray;
+         background-color: #585656;
          color: black;
          margin: 0;
          padding: 20px;
@@ -54,7 +54,7 @@
     display: block;
     color: black;
     padding: 10px;
-    background-color: darkgray;
+    background-color: #d4d0d0;
 }
 
 .menu > li:hover .sub-menu {
