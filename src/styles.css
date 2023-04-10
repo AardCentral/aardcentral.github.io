@@ -146,8 +146,38 @@ body.dark-mode .sub-menu > li:hover {
   height: 34px;
 }
 
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
 .mode-icons {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  width: 
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 8px;
+}
