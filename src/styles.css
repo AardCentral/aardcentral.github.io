@@ -129,6 +129,7 @@ body.dark-mode .sub-menu > li:hover {
   color: inherit;
 }
 
+/* Updated styles */
 .mode-switch {
   position: fixed;
   top: 20px;
@@ -157,12 +158,6 @@ body.dark-mode .sub-menu > li:hover {
 
 .mode-icons .icon {
   font-size: 12px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
 }
 
 .slider {
@@ -197,14 +192,9 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-
-/* Add styles for the slider when focused */
-
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
-
-/* Add styles for the slider when disabled */
 
 input:disabled + .slider {
   background-color: #ddd;
