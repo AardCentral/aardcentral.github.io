@@ -60,6 +60,29 @@
          <li><a href="https://github.com/tallimos/AardPlugins" target="_blank">Tallimos</a></li>
       </ul>
    </div>
+   
+      <script>
+      // Get the toggle button and body element
+      const toggleButton = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      // Check if dark mode is stored in localStorage
+      if (localStorage.getItem("darkMode") === "true") {
+         body.classList.add("dark-mode");
+      } else {
+         body.classList.add("light-mode");
+      }
+
+      // Add event listener to the toggle button
+      toggleButton.addEventListener("click", () => {
+         // Toggle dark and light mode classes on the body
+         body.classList.toggle("dark-mode");
+         body.classList.toggle("light-mode");
+
+         // Store the current mode in localStorage
+         localStorage.setItem("darkMode", body.classList.contains("dark-mode"));
+      });
+   </script>
 </body>
 
 </html>
