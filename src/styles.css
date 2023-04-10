@@ -1,7 +1,25 @@
+:root {
+  --light-bg: #ffffff;
+  --light-text: #333333;
+  --dark-bg: #1a1a1a;
+  --dark-text: #f5f5f5;
+}
+
+body.light-mode {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
 .content {
   max-width: 50%;
   margin: 0 auto;
   text-align: center;
+  background-color: inherit;
   padding: 20px;
   border: 1px solid black;
   border-radius: 5px;
@@ -49,9 +67,9 @@ a:visited {
 
 .menu > li > a {
   display: block;
-  color: black;
   padding: 10px;
-  background-color: #d4d0d0;
+  background-color: inherit;
+  color: inherit;
 }
 
 .menu > li:hover .sub-menu {
@@ -66,7 +84,7 @@ a:visited {
   display: none;
   padding: 0;
   margin: 0;
-  background-color: darkgray;
+  background-color: inherit;
   border: 1px solid black;
   border-radius: 5px;
   -webkit-column-count: 5;
@@ -80,78 +98,6 @@ a:visited {
 }
 
 .sub-menu > li:hover {
-  background-color: #f0f0f0;
-  color: black;
-}
-
-/* Light mode styles */
-.light-mode {
-  background-color: #f0f0f0;
-  color: black;
-}
-
-.light-mode a {
-  color: blue;
-}
-
-.light-mode a:visited {
-  color: red;
-}
-
-.light-mode .content {
-  background-color: white;
-}
-
-/* Dark mode styles */
-.dark-mode {
-  background-color: #585656;
-  color: white;
-}
-
-.dark-mode a {
-  color: #66ccff;
-}
-
-.dark-mode a:visited {
-  color: #ffcc66;
-}
-
-.dark-mode .content {
-  background-color: darkgray;
-}
-
-    display: block;
-    color: black;
-    padding: 10px;
-    background-color: #d4d0d0;
-}
-
-.menu > li:hover .sub-menu {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    z-index: 1;
-}
-
-.sub-menu {
-    display: none;
-    padding: 0;
-    margin: 0;
-    background-color: darkgray;
-    border: 1px solid black;
-    border-radius: 5px;
-    -webkit-column-count: 5;
-    -moz-column-count: 5;
-    column-count: 5;
-}
-
-.sub-menu > li {
-    display: block;
-    padding: 8px;
-}
-
-.sub-menu > li:hover {
-    background-color: #f0f0f0;
-    color: black;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: inherit;
 }
