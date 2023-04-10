@@ -155,6 +155,10 @@ body.dark-mode .sub-menu > li:hover {
   pointer-events: none;
 }
 
+.mode-icons .icon {
+  font-size: 12px;
+}
+
 .switch input {
   opacity: 0;
   width: 0;
