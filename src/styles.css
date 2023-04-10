@@ -124,3 +124,7 @@ body.dark-mode .sub-menu > li:hover {
   background-color: var(--dark-hover-bg);
   color: var(--dark-text);
 }
+
+.disclaimer {
+  color: inherit;
+}
