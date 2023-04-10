@@ -165,19 +165,19 @@ body.dark-mode .sub-menu > li:hover {
   padding: 0 4px;
 }
 
-.fa-sun {
+.slider > .fa-sun {
   display: none;
 }
 
-.fa-moon {
+.slider > .fa-moon {
   display: block;
 }
 
-input:checked ~ .slider .fa-sun {
+input:checked + .slider > .fa-sun {
   display: block;
 }
 
-input:checked ~ .slider .fa-moon {
+input:checked + .slider > .fa-moon {
   display: none;
 }
 
