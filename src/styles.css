@@ -129,8 +129,6 @@ body.dark-mode .sub-menu > li:hover {
   color: inherit;
 }
 
-/* Add this code to your styles.css file */
-
 .switch {
   position: relative;
   display: inline-block;
@@ -176,16 +174,24 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Add styles for the slider when focused */
-
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-/* Add styles for the slider when disabled */
-
 input:disabled + .slider {
   background-color: #ddd;
   cursor: not-allowed;
+}
+
+.mode-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.mode-text {
+  margin-right: 10px;
 }
 
