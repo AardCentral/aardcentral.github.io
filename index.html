@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
    <title>AardCentral</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/6en8XCp+HHAAK5GSLf2xlYtvJ8U2Q4U+9cuEnJoa3" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="styles.css">
+   <!-- Add the following link to use Font Awesome icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/6en8XCp+HHAAK5GSLf2xlYtvJ8U2Q4U+9cuEnJoa3" crossorigin="anonymous">
 </head>
 
 <body class="dark-mode">
@@ -12,6 +12,7 @@
   <label class="switch">
     <input type="checkbox" id="theme-toggle">
     <span class="slider">
+      <!-- Add the sun and moon icons inside the slider -->
       <div class="mode-icons">
         <i class="icon far fa-sun"></i>
         <i class="icon far fa-moon"></i>
@@ -71,13 +72,12 @@
          <li><a href="https://github.com/tallimos/AardPlugins" target="_blank">Tallimos</a></li>
       </ul>
    </div>
-   <script>
+  <script>
     document.getElementById('theme-toggle').addEventListener('change', function () {
       document.body.classList.toggle('light-mode');
       document.body.classList.toggle('dark-mode');
     });
-
-   </script>
+  </script>
 </body>
 
 </html>
