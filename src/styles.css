@@ -95,12 +95,19 @@ body.dark-mode .menu > li > a {
   display: none;
   padding: 0;
   margin: 0;
-  background-color: inherit;
   border: 1px solid black;
   border-radius: 5px;
   -webkit-column-count: 5;
   -moz-column-count: 5;
   column-count: 5;
+}
+
+body.light-mode .sub-menu {
+  background-color: var(--light-bg);
+}
+
+body.dark-mode .sub-menu {
+  background-color: var(--dark-bg);
 }
 
 .sub-menu > li {
