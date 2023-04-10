@@ -1,20 +1,38 @@
-body {
-  background-color: #585656;
-  color: white;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-family: Arial, sans-serif;
+:root {
+  --light-bg: #d4d0d0;
+  --light-text: #2a2a2a;
+  --dark-bg: #1a1a1a;
+  --dark-text: #f5f5f5;
+  --light-box-bg: #ffffff;
+  --dark-box-bg: #2a2a2a;
+  --light-hover-bg: #e8e8e8;
+  --dark-hover-bg: #3a3a3a;
+}
+
+body.light-mode {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 }
 
 .content {
   max-width: 50%;
   margin: 0 auto;
   text-align: center;
-  background-color: #2d2d2d;
+  background-color: inherit;
   padding: 20px;
   border: 1px solid black;
   border-radius: 5px;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
 }
 
 a {
@@ -53,9 +71,16 @@ a:visited {
 
 .menu > li > a {
   display: block;
-  color: black;
   padding: 10px;
-  background-color: #d4d0d0;
+  color: inherit;
+}
+
+body.light-mode .menu > li > a {
+  background-color: var(--light-box-bg);
+}
+
+body.dark-mode .menu > li > a {
+  background-color: var(--dark-box-bg);
 }
 
 .menu > li:hover .sub-menu {
@@ -70,8 +95,6 @@ a:visited {
   display: none;
   padding: 0;
   margin: 0;
-  background-color: #2d2d2d;
-  color: white;
   border: 1px solid black;
   border-radius: 5px;
   -webkit-column-count: 5;
@@ -79,60 +102,89 @@ a:visited {
   column-count: 5;
 }
 
+body.light-mode .sub-menu {
+  background-color: var(--light-bg);
+}
+
+body.dark-mode .sub-menu {
+  background-color: var(--dark-bg);
+}
+
 .sub-menu > li {
   display: block;
   padding: 8px;
 }
 
-.sub-menu > li:hover {
-  background-color: #404040;
-  color: white;
+body.light-mode .sub-menu > li:hover {
+  background-color: var(--light-hover-bg);
+  color: var(--light-text);
 }
 
-.mode-switch {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  display: flex;
-  align-items: center;
-  z-index: 1000;
+body.dark-mode .sub-menu > li:hover {
+  background-color: var(--dark-hover-bg);
+  color: var(--dark-text);
 }
 
-.mode-text {
-  margin-right: 10px;
+.disclaimer {
+  color: inherit;
+}
+
+/* Add this code to your styles.css file */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
 
 .switch input {
-  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 26px;
-  margin-right: 10px;
-  background-color: #bbb;
-  border-radius: 50px;
-  transition: background-color .4s;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
 }
 
-.slider::before {
+.slider:before {
   position: absolute;
   content: "";
-  height: 20px;
-  width: 20px;
-  left: 3px;
-  bottom: 3px;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
   background-color: white;
+  transition: .4s;
   border-radius: 50%;
-  transition: transform .4s;
 }
 
 input:checked + .slider {
   background-color: #2196F3;
 }
 
-input:checked + .slider::before {
+input:checked + .slider:before {
   transform: translateX(26px);
+}
+
+/* Add styles for the slider when focused */
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+/* Add styles for the slider when disabled */
+
+input:disabled + .slider {
+  background-color: #ddd;
+  cursor: not-allowed;
 }
