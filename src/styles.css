@@ -132,10 +132,13 @@ body.dark-mode .sub-menu > li:hover {
 /* Add this code to your styles.css file */
 
 .switch {
-  position: relative;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   display: inline-block;
   width: 60px;
   height: 34px;
+  z-index: 9999;
 }
 
 .switch input {
@@ -175,6 +178,7 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(26px);
 }
+
 
 /* Add styles for the slider when focused */
 
