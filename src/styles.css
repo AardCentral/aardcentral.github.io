@@ -188,3 +188,15 @@ input:disabled + .slider {
   background-color: #ddd;
   cursor: not-allowed;
 }
+
+.mode-switch-container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.mode-text {
+  margin-right: 10px;
+}
