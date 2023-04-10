@@ -3,6 +3,10 @@
   --light-text: #2a2a2a;
   --dark-bg: #1a1a1a;
   --dark-text: #f5f5f5;
+  --light-box-bg: #ffffff;
+  --dark-box-bg: #2a2a2a;
+  --light-hover-bg: #e8e8e8;
+  --dark-hover-bg: #3a3a3a;
 }
 
 body.light-mode {
@@ -68,8 +72,15 @@ a:visited {
 .menu > li > a {
   display: block;
   padding: 10px;
-  background-color: inherit;
   color: inherit;
+}
+
+body.light-mode .menu > li > a {
+  background-color: var(--light-box-bg);
+}
+
+body.dark-mode .menu > li > a {
+  background-color: var(--dark-box-bg);
 }
 
 .menu > li:hover .sub-menu {
@@ -97,7 +108,12 @@ a:visited {
   padding: 8px;
 }
 
-.sub-menu > li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: inherit;
+body.light-mode .sub-menu > li:hover {
+  background-color: var(--light-hover-bg);
+  color: var(--light-text);
+}
+
+body.dark-mode .sub-menu > li:hover {
+  background-color: var(--dark-hover-bg);
+  color: var(--dark-text);
 }
