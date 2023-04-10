@@ -1,56 +1,125 @@
-     .content {
-         max-width: 50%;
-         margin: 0 auto;
-         text-align: center;
-         background-color: darkgray;
-         padding: 20px;
-         border: 1px solid black;
-         border-radius: 5px;
-      }
+.content {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
 
-      body {
-         background-color: #585656;
-         color: black;
-         margin: 0;
-         padding: 20px;
-         text-align: center;
-      }
+body {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
 
-      a {
-         color: blue;
-      }
+a {
+  color: blue;
+}
 
-      a:visited {
-         color: red;
-      }
+a:visited {
+  color: red;
+}
 
 .container {
-    max-width: 60%;
-    margin: 0 auto;
+  max-width: 60%;
+  margin: 0 auto;
 }
 
 .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu > li {
-    display: inline-block;
-    position: relative;
-    flex-basis: calc(33.33% - 10px);
-    margin-right: 10px;
-    margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  flex-basis: calc(33.33% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .menu > li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .menu > li > a {
+  display: block;
+  color: black;
+  padding: 10px;
+  background-color: #d4d0d0;
+}
+
+.menu > li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 1;
+}
+
+.sub-menu {
+  display: none;
+  padding: 0;
+  margin: 0;
+  background-color: darkgray;
+  border: 1px solid black;
+  border-radius: 5px;
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  column-count: 5;
+}
+
+.sub-menu > li {
+  display: block;
+  padding: 8px;
+}
+
+.sub-menu > li:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+/* Light mode styles */
+.light-mode {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.light-mode a {
+  color: blue;
+}
+
+.light-mode a:visited {
+  color: red;
+}
+
+.light-mode .content {
+  background-color: white;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #585656;
+  color: white;
+}
+
+.dark-mode a {
+  color: #66ccff;
+}
+
+.dark-mode a:visited {
+  color: #ffcc66;
+}
+
+.dark-mode .content {
+  background-color: darkgray;
+}
+
     display: block;
     color: black;
     padding: 10px;
