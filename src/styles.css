@@ -165,20 +165,12 @@ body.dark-mode .sub-menu > li:hover {
   padding: 0 4px;
 }
 
-.slider > .fa-sun {
-  display: none;
+.icon {
+  font-size: 16px;
 }
 
-.slider > .fa-moon {
-  display: block;
-}
-
-input:checked + .slider > .fa-sun {
-  display: block;
-}
-
-input:checked + .slider > .fa-moon {
-  display: none;
+.sun-icon {
+  color: #f1d209;
 }
 
 .slider:before {
@@ -200,18 +192,19 @@ input:checked + .slider {
   background-color: #2196F3;
 }
 
-#theme-toggle:checked ~ .slider .fa-sun {
+.slider .sun-icon {
   display: none;
 }
 
-#theme-toggle:checked ~ .slider .fa-moon {
+.slider .moon-icon {
   display: block;
 }
 
-#theme-toggle:not(:checked) ~ .slider .fa-sun {
+input:checked + .slider .sun-icon {
   display: block;
 }
 
-#theme-toggle:not(:checked) ~ .slider .fa-moon {
+input:checked + .slider .moon-icon {
   display: none;
 }
+
