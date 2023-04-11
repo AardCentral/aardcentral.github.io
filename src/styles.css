@@ -186,6 +186,7 @@ body.dark-mode .sub-menu > li:hover {
   bottom: 4px;
   background-color: white;
   transition: 0.4s;
+  z-index: 1;
 }
 
 input:checked + .slider {
