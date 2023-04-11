@@ -184,7 +184,7 @@ body.dark-mode .sub-menu > li:hover {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: navy;
   transition: 0.4s;
   z-index: 1;
 }
