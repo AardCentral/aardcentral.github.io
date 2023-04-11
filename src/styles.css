@@ -22,7 +22,7 @@ body.dark-mode {
 .content {
   max-width: 50%;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   background-color: inherit;
   padding: 20px;
   border: 1px solid black;
