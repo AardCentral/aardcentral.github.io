@@ -159,18 +159,6 @@ body.dark-mode .sub-menu > li:hover {
   bottom: 0;
   background-color: #ccc;
   transition: 0.4s;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 4px;
-}
-
-.icon {
-  font-size: 16px;
-}
-
-.sun-icon {
-  color: #f1d209;
 }
 
 .slider:before {
@@ -184,28 +172,45 @@ body.dark-mode .sub-menu > li:hover {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: navy;
+  background-color: white;
   transition: 0.4s;
-  z-index: 1;
 }
 
 input:checked + .slider {
   background-color: #2196F3;
 }
 
-.slider .sun-icon {
+input:checked + .slider:after {
+  transform: translateX(26px);
+}
+
+.icon {
+  position: absolute;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.sun-icon {
+  color: #f1d209;
+  left: 5px;
+}
+
+.moon-icon {
+  right: 5px;
+}
+
+input:checked ~ .slider .sun-icon {
   display: none;
 }
 
-.slider .moon-icon {
+input:checked ~ .slider .moon-icon {
   display: block;
 }
 
-input:checked + .slider .sun-icon {
+input:not(:checked) ~ .slider .sun-icon {
   display: block;
 }
 
-input:checked + .slider .moon-icon {
+input:not(:checked) ~ .slider .moon-icon {
   display: none;
 }
-
