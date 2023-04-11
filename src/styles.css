@@ -25,7 +25,7 @@ body.dark-mode {
   text-align: left;
   background-color: inherit;
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid inherit;
   border-radius: 5px;
 }
 
