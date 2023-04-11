@@ -19,6 +19,14 @@ body.dark-mode {
   color: var(--dark-text);
 }
 
+body.light-mode .content {
+  border-color: black;
+}
+
+body.dark-mode .content {
+  border-color: white;
+}
+
 .content {
   max-width: 50%;
   margin: 0 auto;
