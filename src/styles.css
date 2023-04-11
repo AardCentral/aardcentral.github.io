@@ -140,8 +140,8 @@ body.dark-mode .sub-menu > li:hover {
 /* Updated styles */
 .mode-switch {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1.5vw; /* Updated */
+  right: 1.5vw; /* Updated */
   z-index: 100;
 }
 
