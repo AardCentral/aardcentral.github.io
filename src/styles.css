@@ -130,43 +130,36 @@ body.dark-mode .sub-menu > li:hover {
 }
 
 /* Updated styles */
-.theme-toggle {
+.mode-switch {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 100;
-  width: 34px;
-  height: 34px;
-  background-color: #1a1a1a;
-  border-radius: 5px;
-  cursor: pointer;
+}
+
+.theme-toggle {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: navy;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
   transition: background-color 0.4s;
 }
 
 .theme-toggle.light {
-  background-color: #d4d0d0;
+  background-color: skyblue;
 }
 
-.theme-toggle.dark {
-  background-color: #1a1a1a;
-}
-
-.sun-icon, .moon-icon {
-  font-size: 18px;
-  pointer-events: none;
+.icon {
+  font-size: 20px;
 }
 
 .sun-icon {
-  color: #f1d209;
   display: none;
-}
-
-.moon-icon {
-  color: #f5f5f5;
-  display: block;
 }
 
 .theme-toggle.light .sun-icon {
@@ -175,12 +168,4 @@ body.dark-mode .sub-menu > li:hover {
 
 .theme-toggle.light .moon-icon {
   display: none;
-}
-
-.theme-toggle.dark .sun-icon {
-  display: none;
-}
-
-.theme-toggle.dark .moon-icon {
-  display: block;
 }
