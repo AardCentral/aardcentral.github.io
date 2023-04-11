@@ -149,21 +149,21 @@ body.dark-mode .sub-menu > li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 3.5vw; /* Updated */
+  height: 3.5vw; /* Updated */
   background-color: navy;
   color: white;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 50%; /* Updated to make it circular */
   transition: background-color 0.4s;
 }
 
 .theme-toggle.light {
-  background-color: skyblue;
+  background-color: deepskyblue;
 }
 
 .icon {
-  font-size: 20px;
+  font-size: 1.2vw; /* Updated */
 }
 
 .sun-icon {
