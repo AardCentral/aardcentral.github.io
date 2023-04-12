@@ -67,6 +67,18 @@
       </ul>
    </div>
    <script>
+      
+ function updateIconSize() {
+  const zoomLevel = window.devicePixelRatio;
+  const iconSize = 24 / zoomLevel;
+
+  const sunIcon = document.querySelector('.sun-icon');
+  const moonIcon = document.querySelector('.moon-icon');
+
+  sunIcon.style.fontSize = `${iconSize}px`;
+  moonIcon.style.fontSize = `${iconSize}px`;
+}
+      
 function updateThemeButton() {
   var themeToggle = document.getElementById('theme-toggle');
   var sunIcon = themeToggle.querySelector('.sun-icon');
@@ -111,7 +123,10 @@ if (savedTheme) {
 }
 
 updateThemeButton();
+updateIconSize();
 
+// Update the icon size when the user zooms in or out
+window.addEventListener('resize', updateIconSize);
    </script>
 </body>
 </html>
