@@ -67,22 +67,14 @@
       </ul>
    </div>
    <script>
-      
- function updateIconSize() {
-  const zoomLevel = window.devicePixelRatio;
-  const iconSize = 24 / zoomLevel;
-
-  const sunIcon = document.querySelector('.sun-icon');
-  const moonIcon = document.querySelector('.moon-icon');
-
-  sunIcon.style.fontSize = `${iconSize}px`;
-  moonIcon.style.fontSize = `${iconSize}px`;
-}
-      
 function updateThemeButton() {
   var themeToggle = document.getElementById('theme-toggle');
   var sunIcon = themeToggle.querySelector('.sun-icon');
   var moonIcon = themeToggle.querySelector('.moon-icon');
+
+  // Calculate the border width and icon size based on the current zoom level
+  var borderWidth = 2 / window.devicePixelRatio;
+  var iconSize = 20 / window.devicePixelRatio;
 
   if (document.body.classList.contains('light-mode')) {
     themeToggle.style.backgroundColor = 'deepskyblue';
@@ -93,7 +85,15 @@ function updateThemeButton() {
     sunIcon.style.display = 'none';
     moonIcon.style.display = 'inline';
   }
+
+  // Apply the calculated border width and icon size
+  themeToggle.style.borderWidth = borderWidth + "px";
+  sunIcon.style.fontSize = iconSize + "px";
+  moonIcon.style.fontSize = iconSize + "px";
 }
+
+// Add a listener to update the border width and icon size when the window is resized
+window.addEventListener('resize', updateThemeButton);
 
 document.getElementById('theme-toggle').addEventListener('click', function () {
   document.body.classList.toggle('light-mode');
@@ -123,10 +123,7 @@ if (savedTheme) {
 }
 
 updateThemeButton();
-updateIconSize();
 
-// Update the icon size when the user zooms in or out
-window.addEventListener('resize', updateIconSize);
    </script>
 </body>
 </html>
