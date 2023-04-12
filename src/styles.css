@@ -162,10 +162,19 @@ body.dark-mode .sub-menu > li:hover {
   background-color: deepskyblue;
 }
 
-.sun-icon,
-.moon-icon {
-  display: none;
-}
+  .sun-icon,
+  .moon-icon {
+    width: 30px;
+    height: 30px;
+    transform-origin: center;
+    transform: scale(1);
+    backface-visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+  }
 
 .theme-toggle.light .sun-icon {
   display: block;
