@@ -149,12 +149,12 @@ body.dark-mode .sub-menu > li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35px; /* Updated */
-  height: 35px; /* Updated */
+  width: 32px; /* Updated */
+  height: 32px; /* Updated */
   background-color: navy;
   color: white;
   cursor: pointer;
-  border-radius: 50%; /* Updated to make it circular */
+  border-radius: 50%; /* Updated */
   transition: background-color 0.4s;
 }
 
@@ -162,13 +162,8 @@ body.dark-mode .sub-menu > li:hover {
   background-color: deepskyblue;
 }
 
-.icon {
-  font-size: 20px;
-  transform: translate(0px, -1px); /* Add this line */
-}
-
-
-.sun-icon {
+.sun-icon,
+.moon-icon {
   display: none;
 }
 
