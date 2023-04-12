@@ -164,7 +164,7 @@ body.dark-mode .sub-menu > li:hover {
 
 .icon {
   font-size: 20px;
-  transform: translate(-1px, -1px); /* Add this line */
+  transform: translate(0px, -1px); /* Add this line */
 }
 
 
