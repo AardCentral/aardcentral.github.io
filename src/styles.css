@@ -149,8 +149,8 @@ body.dark-mode .sub-menu > li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px; /* Updated */
-  height: 30px; /* Updated */
+  width: 35px; /* Updated */
+  height: 35px; /* Updated */
   background-color: navy;
   color: white;
   cursor: pointer;
@@ -164,7 +164,7 @@ body.dark-mode .sub-menu > li:hover {
 
 .icon {
   font-size: 20px;
-  transform: translate(0px, -3px); /* Add this line */
+  transform: translate(0px, -1px); /* Add this line */
 }
 
 
