@@ -149,8 +149,8 @@ body.dark-mode .sub-menu > li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 3.5vw; /* Updated */
-  height: 3.5vw; /* Updated */
+  width: 2vw; /* Updated */
+  height: 2vw; /* Updated */
   background-color: navy;
   color: white;
   cursor: pointer;
@@ -163,7 +163,7 @@ body.dark-mode .sub-menu > li:hover {
 }
 
 .icon {
-  font-size: 1.2vw; /* Updated */
+  font-size: 1vw; /* Updated */
 }
 
 .sun-icon {
