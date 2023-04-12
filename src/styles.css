@@ -161,14 +161,10 @@ body.dark-mode .sub-menu > li:hover {
 .theme-toggle.light {
   background-color: deepskyblue;
 }
-
-.icon {
-  font-size: 20px;
-}
-
 .sun-icon,
 .moon-icon {
   display: none;
+  font-size: 1.5vw; /* Add the font-size property here */
 }
 
 .theme-toggle.light .sun-icon {
