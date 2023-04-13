@@ -73,7 +73,7 @@ a:visited {
   margin-bottom: 10px;
 }
 
-.menu > li:last-child {
+.menu > li:nth-child(3n) {
   margin-right: 0;
 }
 
